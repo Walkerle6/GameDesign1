@@ -1,1 +1,19 @@
+using UnityEngine;
+
+public class Checkpoint : MonoBehaviour
+{
+    private void OnTriggerEnter(Collider other)
+    {
+        // Check if the player enters the checkpoint
+        if (other.CompareTag("Player"))
+        {
+            // Find the PlayerCheckpoint script and notify the player that they passed a checkpoint
+            PlayerCheckpoint playerCheckpoint = other.GetComponent<PlayerCheckpoint>();
+            if (playerCheckpoint != null)
+            {
+                playerCheckpoint.CheckpointPassed(transform.position);
+            }
+        }
+    }
+}
 
