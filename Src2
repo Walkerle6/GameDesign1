@@ -1,1 +1,22 @@
+using UnityEngine;
+
+public class PlayerCheckpoint : MonoBehaviour
+{
+    // Function that gets called when a checkpoint is passed
+    public void CheckpointPassed(Vector3 checkpointPosition)
+    {
+        // Print a message to the console when a checkpoint is passed
+        Debug.Log("Checkpoint passed at position: " + checkpointPosition);
+        // Optionally, display an in-game message
+        ShowMessage("You passed a checkpoint!");
+    }
+
+    // Function to display a message on screen (optional)
+    private void ShowMessage(string message)
+    {
+        // You can implement UI logic here to display the message in the game
+        // For simplicity, we'll just log it for now
+        Debug.Log(message);
+    }
+}
 
