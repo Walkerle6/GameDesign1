@@ -1,1 +1,8 @@
-
+Setup in Unity
+Tag your player object as "Player".
+Attach the PlayerCheckpoint script to your player.
+Create checkpoint objects in the scene and attach the Checkpoint script to each one.
+Add a trigger collider to each checkpoint (set IsTrigger to true).
+What happens:
+When the player passes through a checkpoint, a message is printed in the console like "Checkpoint passed at position: (x, y, z)".
+You can expand the ShowMessage function to display the message visually in the game using Unity's UI system (like using a text field or notification popup).
